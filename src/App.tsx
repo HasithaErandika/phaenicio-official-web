@@ -2,7 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import { About, Services, Contact } from './pages/OtherPages';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Services from './pages/Services';
+
+
+import UserGuide from './pages/UserGuide';
 import ParticleBackground from './components/ParticleBackground';
 
 function App() {
@@ -10,12 +15,13 @@ function App() {
     <Router>
       <ParticleBackground />
       <Navbar />
-      <main style={{ minHeight: 'calc(100vh - 80px)' }}>
+      <main className="min-h-[calc(100vh-90px)]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/user-guide" element={<UserGuide />} />
         </Routes>
       </main>
       <Footer />
