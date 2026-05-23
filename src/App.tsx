@@ -9,12 +9,12 @@ import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 
 import { Features, Solutions, Pricing, Security, Blog, Community } from './pages/OtherPages';
-import ParticleBackground from './components/ParticleBackground';
+import { ScrollToTop } from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
-      <ParticleBackground />
+      <ScrollToTop />
       <Navbar />
       <main className="min-h-[calc(100vh-78px)]">
         <Routes>
