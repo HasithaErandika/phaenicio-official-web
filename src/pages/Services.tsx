@@ -1,5 +1,6 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiGlobe, FiDatabase, FiSearch, FiLayers, FiArrowRight } from 'react-icons/fi';
+import { FiGlobe, FiArrowRight } from 'react-icons/fi';
 
 const Services = () => {
   const services = [
@@ -8,51 +9,18 @@ const Services = () => {
       title: 'Zosterix Research Grid',
       badge: 'Flagship Platform',
       isFlagship: true,
-      icon: <FiGlobe />,
-      description: 'Our flagship global research networking platform. Enables students, researchers, and supervisors to verify academic identities, publish research journals/blogs, seek mentorship, and collaborate through secure discussion structures.',
+      icon: <FiGlobe size={28} />,
+      description: 'Our flagship global research networking platform. Enables students, researchers, and supervisors to verify academic identities, publish research journals, seek mentorship, and collaborate through secure discussion structures.',
       link: 'https://zosterix.phaenicio.com/',
       isExternal: true,
       actionText: 'Access Zosterix Grid'
-    },
-    {
-      id: 'compute',
-      title: 'Compute Nodes & Cloud Grid',
-      badge: 'High-Performance Computing',
-      isFlagship: false,
-      icon: <FiDatabase />,
-      description: 'Distributed high-performance computing clusters tailored for scientific simulations, dataset modeling, and advanced data rendering. Optimized for research teams working with large-scale data pipelines.',
-      link: '/contact',
-      isExternal: false,
-      actionText: 'Request Node Access'
-    },
-    {
-      id: 'indexing',
-      title: 'AI Academic Indexing & Semantic Search',
-      badge: 'Information Orchestration',
-      isFlagship: false,
-      icon: <FiSearch />,
-      description: 'Next-generation semantic indexing that connects institutional knowledge, preprints, and research blogs across border silos, enabling fast discovery of relevant work and expertise tags.',
-      link: '/contact',
-      isExternal: false,
-      actionText: 'Request Integration'
-    },
-    {
-      id: 'consulting',
-      title: 'Cross-Border Architecture Consulting',
-      badge: 'Specialized Systems',
-      isFlagship: false,
-      icon: <FiLayers />,
-      description: 'Bespoke systems architecting and technical advisory for universities and research departments. We help design secure, compliant cross-border data vaults and grant submission pipelines.',
-      link: '/contact',
-      isExternal: false,
-      actionText: 'Consult with Founders'
     }
   ];
 
   return (
-    <div className="flex flex-col fade-in pt-[78px] bg-white min-h-screen">
+    <div className="flex flex-col animate-in fade-in duration-700 pt-[140px] pb-10 bg-slate-50 min-h-screen relative">
       
-      {/* Shared Animations */}
+      {/* Shared Animations & Ambient Backgrounds */}
       <style>{`
         @keyframes pulse-dot {
           0%, 100% { opacity: 1; transform: scale(1); }
@@ -68,73 +36,78 @@ const Services = () => {
           mask-image: radial-gradient(circle at 50% 10%, black, transparent 80%);
           -webkit-mask-image: radial-gradient(circle at 50% 10%, black, transparent 80%);
         }
+        .fade-up-element {
+            animation: fadeUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
       `}</style>
 
       {/* Hero Section */}
-      <header className="relative pt-20 pb-24 px-[5%] overflow-hidden border-b border-slate-200">
+      <header className="relative pt-16 pb-24 px-6 md:px-12 overflow-hidden border-b border-slate-200/60">
         <div className="absolute inset-0 pointer-events-none hero-grid z-0"></div>
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[60%] h-[60%] bg-gradient-to-b from-accent/5 to-transparent blur-3xl pointer-events-none"></div>
+        {/* Soft Ambient Glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-indigo-500/10 blur-[100px] rounded-full pointer-events-none z-0"></div>
 
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-800 mb-6 uppercase tracking-wider">
+        <div className="relative z-10 max-w-4xl mx-auto text-center fade-up-element">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/60 backdrop-blur-md border border-slate-200/80 text-xs font-semibold text-slate-700 mb-6 shadow-sm">
+            <span className="w-2 h-2 bg-indigo-500 rounded-full shadow-[0_0_8px_rgba(99,102,241,0.6)]"></span>
             Phaenicio Ecosystem
           </div>
           
-          <h1 className="font-display text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.08] mb-6 text-slate-950 text-balance">
+          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6 text-slate-950 text-balance">
             Our Services <br className="hidden sm:block" /> 
-            <span className="text-slate-400">& Platforms</span>
+            <span className="bg-gradient-to-r from-slate-400 to-slate-600 bg-clip-text text-transparent">
+              & Platforms.
+            </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto text-pretty">
+          <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto text-pretty font-medium">
             Purpose-built digital infrastructure, compute grids, and intelligence layers for scientific and academic communities.
           </p>
         </div>
       </header>
 
-      {/* Services Grid Section */}
-      <section className="py-20 px-[5%] bg-slate-50 flex-grow">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 gap-6 max-lg:grid-cols-1 text-left">
-          {services.map((service) => (
+      {/* Services Section (Single Flagship Item) */}
+      <section className="py-24 px-6 md:px-12 flex-grow relative z-10 -mt-10">
+        <div className="max-w-5xl mx-auto">
+          {services.map((service, index) => (
             <article 
               key={service.id} 
-              className={`p-8 md:p-10 rounded-[2rem] border transition-all duration-300 flex flex-col justify-between group relative overflow-hidden ${
-                service.isFlagship 
-                  ? 'bg-white border-accent/20 shadow-md hover:shadow-xl hover:shadow-accent/5' 
-                  : 'bg-white border-slate-200 shadow-sm hover:shadow-md'
-              }`}
+              className="p-10 md:p-16 rounded-[2.5rem] transition-all duration-500 flex flex-col justify-between group relative overflow-hidden fade-up-element bg-white/60 backdrop-blur-2xl border border-indigo-100 shadow-[0_8px_30px_rgba(99,102,241,0.06)] hover:shadow-[0_20px_40px_rgba(99,102,241,0.12)] hover:-translate-y-1"
+              style={{ animationDelay: `${0.1 + (index * 0.1)}s` }}
             >
-              {/* Flagship Background Glow */}
-              {service.isFlagship && (
-                <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl pointer-events-none"></div>
-              )}
+              {/* Ambient Glow for Flagship */}
+              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-indigo-500/5 rounded-full blur-[100px] pointer-events-none transition-colors duration-700 group-hover:bg-indigo-500/10"></div>
 
-              <div className="relative z-10">
+              <div className="relative z-10 md:w-3/4">
                 <div className="flex justify-between items-start mb-8">
-                  <span className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider ${
-                    service.isFlagship ? 'bg-accent/10 text-accent border border-accent/20' : 'bg-slate-100 text-slate-600 border border-slate-200'
-                  }`}>
-                    {service.isFlagship && <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse-dot"></span>}
+                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider shadow-sm bg-indigo-50 text-indigo-600 border border-indigo-100">
+                    <span className="w-2 h-2 rounded-full bg-indigo-600 animate-pulse-dot"></span>
                     {service.badge}
                   </span>
                   
-                  <span className={`w-12 h-12 rounded-xl flex items-center justify-center text-xl transition-transform duration-300 group-hover:scale-110 ${
-                    service.isFlagship ? 'bg-accent text-white shadow-md shadow-accent/20' : 'bg-slate-50 text-slate-700 border border-slate-200'
-                  }`}>
+                  <span className="w-16 h-16 rounded-2xl flex items-center justify-center transition-all duration-500 shadow-sm bg-indigo-600 text-white shadow-indigo-500/20 group-hover:scale-110 group-hover:shadow-indigo-500/40">
                     {service.icon}
                   </span>
                 </div>
                 
-                <h2 className="text-2xl font-bold text-slate-950 mb-4 tracking-tight">{service.title}</h2>
-                <p className="text-sm md:text-base text-slate-600 leading-relaxed mb-8">{service.description}</p>
+                <h2 className="text-4xl md:text-5xl font-extrabold text-slate-950 mb-6 tracking-tight">{service.title}</h2>
+                <p className="text-lg md:text-xl text-slate-600 leading-relaxed mb-12 font-medium text-pretty">
+                  {service.description}
+                </p>
               </div>
 
-              <div className="relative z-10 mt-auto pt-6 border-t border-slate-100">
+              <div className="relative z-10 mt-auto pt-8 border-t border-slate-100/80">
                 {service.isExternal ? (
                   <a 
                     href={service.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-bold text-accent hover:text-indigo-600 transition-colors group/link"
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-slate-950 text-white rounded-full text-sm font-bold transition-all shadow-[0_8px_16px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_24px_rgba(0,0,0,0.15)] group/link hover:-translate-y-0.5 active:translate-y-0 hover:bg-slate-800"
                   >
                     <span>{service.actionText}</span>
                     <FiArrowRight className="group-hover/link:translate-x-1 transition-transform" />
@@ -142,7 +115,7 @@ const Services = () => {
                 ) : (
                   <Link 
                     to={service.link}
-                    className="inline-flex items-center gap-2 text-sm font-bold text-slate-700 hover:text-accent transition-colors group/link"
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-slate-950 text-white rounded-full text-sm font-bold transition-all shadow-[0_8px_16px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_24px_rgba(0,0,0,0.15)] group/link hover:-translate-y-0.5 active:translate-y-0 hover:bg-slate-800"
                   >
                     <span>{service.actionText}</span>
                     <FiArrowRight className="group-hover/link:translate-x-1 transition-transform" />

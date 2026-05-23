@@ -8,23 +8,23 @@
   --font-mono: 'JetBrains Mono', monospace;
 
   /* Custom Color Tokens */
-  --color-primary: #0a0f2d;            /* Deep Space Navy */
-  --color-primary-hover: #1e295d;      /* Lighter Navy */
-  --color-accent: #3b82f6;             /* Engineering Precision Blue */
-  --color-accent-hover: #2563eb;       /* Darker Blue */
-  --color-accent-glow: rgba(59, 130, 246, 0.15);
+  --color-primary: #0f172a;            /* Slate-900 / Strong Dark CTA */
+  --color-primary-hover: #020617;      /* Slate-950 */
+  --color-accent: #e80014;             /* Crimson Red Accent */
+  --color-accent-hover: #c50010;       /* Darker Red */
+  --color-accent-glow: rgba(232, 0, 20, 0.15); /* Red Accent Glow */
   
   --color-text: #475569;               /* Slate-600 (High contrast body text) */
   --color-text-muted: #64748b;         /* Slate-500 */
   --color-text-h: #0f172a;             /* Slate-900 (High contrast headings) */
   
   --color-bg: #f8fafc;                 /* Alabaster/Slate-50 */
-  --color-border: #e2e8f0;             /* Slate-200 */
-  --color-card-bg: #ffffff;            /* Pure Crystal */
+  --color-border: rgba(226, 232, 240, 0.5); /* Semi-translucent border */
+  --color-card-bg: rgba(255, 255, 255, 0.7); /* Translucent Card Background */
   
-  /* Modern shadows */
-  --shadow-premium: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 8px -1px rgba(15, 23, 42, 0.03);
-  --shadow-premium-hover: 0 20px 40px -10px rgba(15, 23, 42, 0.08), 0 2px 10px -1px rgba(15, 23, 42, 0.04);
+  /* Modern shadows - soft elevation */
+  --shadow-premium: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+  --shadow-premium-hover: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 8px -1px rgba(15, 23, 42, 0.03);
 }
 
 @layer base {
@@ -119,22 +119,23 @@
     border: 1px solid var(--color-border);
     border-radius: var(--radius-card);
     box-shadow: var(--shadow-premium);
+    backdrop-filter: blur(12px);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .premium-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px) scale(1.01);
     box-shadow: var(--shadow-premium-hover);
-    border-color: rgba(59, 130, 246, 0.25);
+    border-color: rgba(16, 185, 129, 0.25);
   }
 
   /* Elegant Glass Panel */
   .glass-panel {
-    background: rgba(255, 255, 255, 0.65);
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(16px) saturate(120%);
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px) saturate(120%);
     border-radius: var(--radius-surface);
-    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.04);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
   }
 
   .badge {

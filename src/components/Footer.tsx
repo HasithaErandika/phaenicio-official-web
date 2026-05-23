@@ -41,13 +41,12 @@ const Footer = () => {
               <ul className="flex flex-col gap-3">
                 <li><Link to="/features" className="text-text hover:text-accent transition-colors text-sm font-medium">Features</Link></li>
                 <li><Link to="/solutions" className="text-text hover:text-accent transition-colors text-sm font-medium">Solutions</Link></li>
-                <li><a href="https://zosterix.com" target="_blank" rel="noopener noreferrer" className="text-text hover:text-accent transition-colors text-sm font-medium">Zosterix Portal</a></li>
+                <li><a href="https://zosterix.phaenicio.com" target="_blank" rel="noopener noreferrer" className="text-text hover:text-accent transition-colors text-sm font-medium">Zosterix Portal</a></li>
               </ul>
             </div>
             <div className="flex flex-col">
               <h4 className="font-bold text-text-h mb-5 uppercase text-[11px] tracking-wider font-display opacity-80">Resources</h4>
               <ul className="flex flex-col gap-3">
-                <li><Link to="/user-guide" className="text-text hover:text-accent transition-colors text-sm font-medium">User Guide</Link></li>
                 <li><Link to="/blog" className="text-text hover:text-accent transition-colors text-sm font-medium">Blog</Link></li>
                 <li><Link to="/contact" className="text-text hover:text-accent transition-colors text-sm font-medium">Partnerships</Link></li>
               </ul>
