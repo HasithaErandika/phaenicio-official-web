@@ -42,14 +42,14 @@ const Navbar = () => {
   return (
     <div className="fixed top-0 left-0 w-full z-50 flex justify-center items-center py-4 md:py-6 px-[5%] pointer-events-none" ref={menuRef}>
       {/* Ambient Radial Gradient behind navbar */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[350px] md:w-[600px] h-[80px] md:h-[120px] bg-accent/10 rounded-full blur-[40px] md:blur-[60px] pointer-events-none -z-10" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[350px] md:w-[600px] h-[80px] md:h-[120px] bg-primary/5 rounded-full blur-[40px] md:blur-[60px] pointer-events-none -z-10" />
 
       <nav className="pointer-events-auto w-full max-w-5xl h-14 md:h-16 flex items-center justify-between px-6 bg-white/70 backdrop-blur-md border border-white/20 rounded-full shadow-sm shadow-slate-100/50 transition-all duration-300 relative">
         
         {/* Logo Section */}
         <Link 
           to="/" 
-          className="flex items-center relative z-20 outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-full" 
+          className="flex items-center relative z-20 outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-full" 
           onClick={closeMenu}
         >
           <picture className="flex items-center">
@@ -72,7 +72,7 @@ const Navbar = () => {
               className={({ isActive }) => `
                 text-xs md:text-sm font-medium tracking-wide transition-all duration-200 px-4 py-1.5 rounded-full outline-none
                 ${isActive 
-                  ? 'bg-white text-slate-950 shadow-sm font-semibold' 
+                  ? 'bg-white text-primary shadow-sm font-semibold' 
                   : 'text-slate-600 hover:text-slate-950 hover:bg-white/40'}
               `}
             >
@@ -88,7 +88,7 @@ const Navbar = () => {
             href="https://github.com/phaenicio" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-slate-600 hover:text-slate-950 transition-all duration-200 p-2 rounded-full hover:bg-slate-100 outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            className="text-slate-600 hover:text-slate-950 transition-all duration-200 p-2 rounded-full hover:bg-slate-100 outline-none focus-visible:ring-2 focus-visible:ring-primary"
             title="GitHub"
           >
             <FiGithub className="text-lg" />
@@ -99,7 +99,7 @@ const Navbar = () => {
             href="https://zosterix.phaenicio.com/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center justify-center bg-slate-950 text-white text-xs font-semibold rounded-full px-5 h-9 transition-all duration-200 hover:bg-slate-800 hover:scale-[1.02] active:scale-[0.98] shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary cursor-pointer"
+            className="flex items-center justify-center bg-neutral-dark text-white text-xs font-semibold rounded-full px-5 h-9 transition-all duration-200 hover:bg-primary hover:scale-[1.02] active:scale-[0.98] shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary cursor-pointer font-display"
           >
             Try Zosterix
           </a>
@@ -107,7 +107,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle Button */}
         <button 
-          className="hidden max-md:flex items-center justify-center relative z-20 bg-slate-50 hover:bg-slate-100 text-slate-950 w-9 h-9 rounded-full cursor-pointer transition-colors border border-slate-200/50 outline-none focus-visible:ring-2 focus-visible:ring-accent" 
+          className="hidden max-md:flex items-center justify-center relative z-20 bg-slate-50 hover:bg-slate-100 text-slate-950 w-9 h-9 rounded-full cursor-pointer transition-colors border border-slate-200/50 outline-none focus-visible:ring-2 focus-visible:ring-primary" 
           onClick={toggleMenu} 
           aria-label={isOpen ? "Close menu" : "Open menu"} 
           aria-expanded={isOpen} 
@@ -126,7 +126,7 @@ const Navbar = () => {
                   end={link.end}
                   className={({ isActive }) => `
                     text-base font-semibold transition-all duration-200 px-5 py-2.5 rounded-full outline-none w-full text-center
-                    ${isActive ? 'bg-slate-950 text-white' : 'text-slate-600 hover:text-slate-950 hover:bg-slate-100/60'}
+                    ${isActive ? 'bg-primary text-white' : 'text-slate-600 hover:text-slate-950 hover:bg-slate-100/60'}
                   `}
                   onClick={closeMenu}
                 >
@@ -155,7 +155,7 @@ const Navbar = () => {
                 href="https://zosterix.phaenicio.com/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center justify-center bg-slate-950 hover:bg-slate-800 text-white text-sm font-semibold rounded-full w-full py-3 transition-all duration-200 active:scale-[0.98] shadow-sm cursor-pointer"
+                className="flex items-center justify-center bg-neutral-dark hover:bg-primary text-white text-sm font-semibold rounded-full w-full py-3 transition-all duration-200 active:scale-[0.98] shadow-sm cursor-pointer font-display"
                 onClick={closeMenu}
               >
                 Try Zosterix

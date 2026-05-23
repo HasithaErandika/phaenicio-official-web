@@ -1,7 +1,6 @@
-import React from 'react';
 import nandunImg from '../assets/nandun.jpg';
 import hasithaImg from '../assets/hasitha.jpg';
-import { FiMail, FiMessageCircle, FiLinkedin, FiSend, FiActivity } from 'react-icons/fi';
+import { FiMail, FiMessageCircle, FiLinkedin, FiSend } from 'react-icons/fi';
 
 const Contact = () => {
   const founders = [
@@ -50,28 +49,34 @@ const Contact = () => {
         }
       `}</style>
 
-      {/* Hero Section */}
-      <header className="relative pt-16 pb-24 px-6 md:px-12 overflow-hidden border-b border-slate-200/60">
-        <div className="absolute inset-0 pointer-events-none hero-grid z-0"></div>
-        {/* Soft Ambient Glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-indigo-500/10 blur-[100px] rounded-full pointer-events-none z-0"></div>
+      {/* Professional Subpage Header */}
+      <header className="relative pt-28 pb-20 px-6 md:px-12 overflow-hidden border-b border-slate-200/60 bg-white">
+        {/* Clean Topographic SVG Pattern Background */}
+        <div className="absolute inset-0 opacity-[0.02] pointer-events-none z-0" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%230f172a' fill-rule='evenodd'/%3E%3C/svg%3E")` }}></div>
+        
+        {/* Ambient Corner Glows */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-primary/5 via-secondary/5 to-transparent blur-[80px] rounded-full pointer-events-none z-0"></div>
 
-        <div className="relative z-10 max-w-4xl mx-auto text-center fade-up-element">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/60 backdrop-blur-md border border-slate-200/80 text-xs font-semibold text-slate-700 mb-6 shadow-sm uppercase tracking-wider">
-            <span className="w-2 h-2 bg-indigo-500 rounded-full shadow-[0_0_8px_rgba(99,102,241,0.6)]"></span>
-            Direct Line to the Founders
+        <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-10 fade-up-element">
+          <div className="max-w-3xl text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-bold uppercase tracking-widest text-slate-600 mb-6 shadow-sm">
+              <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse-dot"></span>
+              Direct Line to the Founders
+            </div>
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] text-text-h font-display mb-6 md:mb-0">
+              Get in <br className="hidden sm:block" /> 
+              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                Touch.
+              </span>
+            </h1>
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.1] mb-6 text-slate-950 text-balance">
-            Get in <br className="hidden sm:block" /> 
-            <span className="bg-gradient-to-r from-indigo-600 to-blue-500 bg-clip-text text-transparent">
-              Touch.
-            </span>
-          </h1>
-          
-          <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto text-pretty font-medium">
-            We are always open to research collaborations, academic feedback, and institutional inquiries about the Zosterix ecosystem.
-          </p>
+          <div className="max-w-xl text-left">
+            <p className="text-lg text-text-muted leading-relaxed font-medium border-l-2 border-slate-200 pl-6">
+              We are always open to research collaborations, academic feedback, and institutional inquiries about the Zosterix ecosystem.
+            </p>
+          </div>
         </div>
       </header>
 
@@ -82,15 +87,15 @@ const Contact = () => {
           {/* Left Column: Founders & Comms Info */}
           <div className="flex flex-col gap-8 fade-up-element" style={{ animationDelay: '0.1s' }}>
             <div>
-              <h2 className="text-3xl font-extrabold mb-3 text-slate-950 tracking-tight">System Architects</h2>
-              <p className="text-base text-slate-600 leading-relaxed font-medium">Direct access to the core team behind Phaenicio.</p>
+              <h2 className="text-3xl font-extrabold mb-3 text-text-h tracking-tight font-display">System Architects</h2>
+              <p className="text-base text-text-muted leading-relaxed font-medium">Direct access to the core team behind Phaenicio.</p>
             </div>
             
             <div className="flex flex-col gap-6">
               {founders.map((founder, index) => (
                 <div 
                   key={index} 
-                  className="p-6 rounded-[2rem] bg-white border border-slate-100 shadow-[0_4px_20px_rgba(15,23,42,0.03)] hover:shadow-[0_10px_30px_rgba(99,102,241,0.08)] hover:-translate-y-1 transition-all duration-500 flex items-center gap-6 max-sm:flex-col max-sm:items-start group"
+                  className="p-6 rounded-[2rem] bg-white border border-slate-100 shadow-[0_4px_20px_rgba(15,23,42,0.03)] hover:shadow-[0_10px_30px_var(--color-primary-glow)] hover:-translate-y-1 transition-all duration-500 flex items-center gap-6 max-sm:flex-col max-sm:items-start group"
                 >
                   <div className="w-24 h-24 rounded-2xl overflow-hidden shadow-inner border border-slate-100/50 shrink-0 relative bg-slate-50">
                     <img
@@ -102,13 +107,13 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex-grow">
-                    <h3 className="text-xl font-bold mb-1 text-slate-950 tracking-tight">{founder.name}</h3>
-                    <p className="text-xs text-indigo-600 mb-5 font-bold font-mono uppercase tracking-wider">{founder.role}</p>
+                    <h3 className="text-xl font-bold mb-1 text-text-h tracking-tight">{founder.name}</h3>
+                    <p className="text-xs text-primary mb-5 font-bold font-mono uppercase tracking-wider">{founder.role}</p>
                     
                     <div className="flex flex-wrap gap-4 text-sm font-semibold">
                       <a 
                         href={`mailto:${founder.email}`} 
-                        className="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-50 text-slate-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors border border-slate-100"
+                        className="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-50 text-slate-700 hover:bg-primary-light hover:text-primary transition-colors border border-slate-100"
                       >
                         <FiMail className="text-lg" /> <span>Email</span>
                       </a>
@@ -128,16 +133,16 @@ const Contact = () => {
           </div>
 
           {/* Right Column: Premium Contact Form */}
-          <div className="p-8 md:p-12 rounded-[2.5rem] bg-white/60 backdrop-blur-2xl border border-indigo-100 shadow-[0_8px_30px_rgba(99,102,241,0.06)] relative overflow-hidden fade-up-element" style={{ animationDelay: '0.2s' }}>
+          <div className="p-8 md:p-12 rounded-[2.5rem] bg-white/60 backdrop-blur-2xl border border-slate-100 shadow-[0_8px_30px_rgba(15,23,42,0.03)] relative overflow-hidden fade-up-element" style={{ animationDelay: '0.2s' }}>
             {/* Subtle glow behind form */}
-            <div className="absolute -top-32 -right-32 w-80 h-80 bg-indigo-500/10 rounded-full blur-[80px] pointer-events-none"></div>
+            <div className="absolute -top-32 -right-32 w-80 h-80 bg-primary/5 rounded-full blur-[80px] pointer-events-none"></div>
             
             <div className="relative z-10 mb-10">
-              <div className="w-14 h-14 bg-indigo-50 border border-indigo-100/50 text-indigo-600 rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
+              <div className="w-14 h-14 bg-primary-light border border-primary/20 text-primary rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-sm">
                 <FiMessageCircle />
               </div>
-              <h2 className="text-3xl font-extrabold text-slate-950 mb-3 tracking-tight">Send an Inquiry</h2>
-              <p className="text-base text-slate-600 font-medium">For partnership proposals, compute nodes, or general questions.</p>
+              <h2 className="text-3xl font-extrabold text-text-h mb-3 tracking-tight font-display">Send an Inquiry</h2>
+              <p className="text-base text-text-muted font-medium">For partnership proposals, compute nodes, or general questions.</p>
             </div>
 
             <form
@@ -151,7 +156,7 @@ const Contact = () => {
                     type="text"
                     id="name"
                     name="name"
-                    className="w-full bg-white/80 border border-slate-200/80 rounded-2xl px-5 py-4 text-sm text-slate-900 focus:outline-none focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all placeholder:text-slate-400 shadow-sm"
+                    className="w-full bg-white/80 border border-slate-200/80 rounded-2xl px-5 py-4 text-sm text-slate-900 focus:outline-none focus:ring-4 focus:ring-primary-glow focus:border-primary transition-all placeholder:text-slate-400 shadow-sm"
                     placeholder="Jane Doe"
                     required
                   />
@@ -163,7 +168,7 @@ const Contact = () => {
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full bg-white/80 border border-slate-200/80 rounded-2xl px-5 py-4 text-sm text-slate-900 focus:outline-none focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all placeholder:text-slate-400 shadow-sm"
+                    className="w-full bg-white/80 border border-slate-200/80 rounded-2xl px-5 py-4 text-sm text-slate-900 focus:outline-none focus:ring-4 focus:ring-primary-glow focus:border-primary transition-all placeholder:text-slate-400 shadow-sm"
                     placeholder="jane@university.edu"
                     required
                   />
@@ -176,7 +181,7 @@ const Contact = () => {
                   <select
                     id="subject"
                     name="subject"
-                    className="w-full bg-white/80 border border-slate-200/80 rounded-2xl px-5 py-4 text-sm text-slate-900 focus:outline-none focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all appearance-none cursor-pointer shadow-sm"
+                    className="w-full bg-white/80 border border-slate-200/80 rounded-2xl px-5 py-4 text-sm text-slate-900 focus:outline-none focus:ring-4 focus:ring-primary-glow focus:border-primary transition-all appearance-none cursor-pointer shadow-sm"
                     required
                     defaultValue=""
                   >
@@ -199,7 +204,7 @@ const Contact = () => {
                 <textarea
                   id="message"
                   name="message"
-                  className="w-full bg-white/80 border border-slate-200/80 rounded-2xl px-5 py-4 text-sm text-slate-900 focus:outline-none focus:ring-4 focus:ring-indigo-500/10 focus:border-indigo-500 transition-all placeholder:text-slate-400 min-h-[160px] resize-y shadow-sm"
+                  className="w-full bg-white/80 border border-slate-200/80 rounded-2xl px-5 py-4 text-sm text-slate-900 focus:outline-none focus:ring-4 focus:ring-primary-glow focus:border-primary transition-all placeholder:text-slate-400 min-h-[160px] resize-y shadow-sm"
                   placeholder="Detail your requirements, timeline, or feedback here..."
                   required
                 ></textarea>
@@ -207,7 +212,7 @@ const Contact = () => {
 
               <button 
                 type="submit" 
-                className="w-full mt-4 py-4 md:py-5 bg-slate-950 text-white rounded-full font-bold text-sm transition-all duration-300 hover:bg-slate-800 active:scale-[0.98] shadow-[0_8px_16px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_24px_rgba(0,0,0,0.15)] flex items-center justify-center gap-2 group cursor-pointer hover:-translate-y-0.5"
+                className="w-full mt-4 py-4 md:py-5 bg-neutral-dark text-white rounded-full font-bold text-sm transition-all duration-300 hover:bg-primary active:scale-[0.98] shadow-[0_8px_16px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_24px_rgba(206,0,16,0.15)] flex items-center justify-center gap-2 group cursor-pointer hover:-translate-y-0.5 hover:scale-[1.01]"
               >
                 <span>Transmit Inquiry</span>
                 <FiSend className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -225,7 +230,7 @@ const Contact = () => {
             </span>
             PHAENICIO_COMM_LINK
           </div>
-          <div className="flex items-center gap-2 text-indigo-500 font-bold">
+          <div className="flex items-center gap-2 text-secondary font-bold">
             SECURE_CHANNEL_ESTABLISHED
           </div>
         </div>

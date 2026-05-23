@@ -32,17 +32,18 @@ const ParticleBackground = () => {
     if (!ctx) return;
 
     const CONFIG = {
-      blobAlpha: 0.3,
+      blobAlpha: 0.12, // Slightly reduced to keep readability contrast ultra-premium and accessibility-friendly
     };
 
     let w = 0;
     let h = 0;
     let dpr = 1;
 
+    // Brand-aligned background blobs: Red, Green, and Slate neutral
     const blobs = [
-      { x: 0.22, y: 0.24, size: 0.48, speedX: 0.00012, speedY: 0.00009, phase: 0, color: '10,15,45' },
-      { x: 0.72, y: 0.3, size: 0.44, speedX: 0.0001, speedY: 0.00008, phase: 1.3, color: '85,85,92' },
-      { x: 0.5, y: 0.78, size: 0.52, speedX: 0.00008, speedY: 0.00011, phase: 2.1, color: '115,120,130' },
+      { x: 0.22, y: 0.24, size: 0.48, speedX: 0.00012, speedY: 0.00009, phase: 0, color: '206,0,16' },     // Brand Primary Red
+      { x: 0.72, y: 0.3, size: 0.44, speedX: 0.0001, speedY: 0.00008, phase: 1.3, color: '31,139,81' },    // Brand Secondary Green
+      { x: 0.5, y: 0.78, size: 0.52, speedX: 0.00008, speedY: 0.00011, phase: 2.1, color: '148,163,184' },  // Soft Slate Neutral
     ];
     const startTime = performance.now();
 
@@ -54,7 +55,7 @@ const ParticleBackground = () => {
       const grainCtx = grainCanvas.getContext('2d');
       if (!grainCtx) return null;
 
-      grainCtx.fillStyle = 'rgba(18, 25, 38, 0.015)';
+      grainCtx.fillStyle = 'rgba(19, 10, 10, 0.015)'; // Grain color matching logo neutral dark charcoal
       const pixelCount = Math.floor(128 * 128 * 0.04); // 4% noise density
       for (let i = 0; i < pixelCount; i++) {
         const x = Math.random() * 128;
@@ -113,7 +114,7 @@ const ParticleBackground = () => {
     const drawVignette = () => {
       const radial = ctx.createRadialGradient(w * 0.5, h * 0.4, h * 0.25, w * 0.5, h * 0.5, h * 0.95);
       radial.addColorStop(0, 'rgba(255,255,255,0)');
-      radial.addColorStop(1, 'rgba(15,23,42,0.08)');
+      radial.addColorStop(1, 'rgba(19,10,10,0.04)'); // Matching logo neutral dark
       ctx.fillStyle = radial;
       ctx.fillRect(0, 0, w, h);
     };

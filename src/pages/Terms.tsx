@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiArrowLeft, FiFileText, FiAlertCircle, FiGlobe } from 'react-icons/fi';
+import { FiArrowLeft, FiFileText, FiAlertCircle } from 'react-icons/fi';
 
 const Terms = () => {
   return (
@@ -34,7 +33,8 @@ const Terms = () => {
 
       {/* Global Background Elements */}
       <div className="absolute inset-0 pointer-events-none hero-grid z-0"></div>
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[500px] bg-indigo-500/10 blur-[120px] rounded-full pointer-events-none z-0"></div>
+      <div className="absolute top-0 left-1/4 w-[500px] h-[350px] bg-secondary/5 blur-[100px] rounded-full pointer-events-none z-0"></div>
+      <div className="absolute top-0 right-1/4 w-[500px] h-[350px] bg-primary/5 blur-[100px] rounded-full pointer-events-none z-0"></div>
 
       {/* Main Content Container */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-12 w-full fade-up-element">
@@ -43,7 +43,7 @@ const Terms = () => {
         <div className="mb-8">
           <Link 
             to="/" 
-            className="inline-flex items-center gap-2 text-sm font-bold text-slate-600 hover:text-indigo-600 transition-all duration-300 bg-white/60 backdrop-blur-md hover:bg-white px-5 py-2.5 border border-slate-200/80 hover:border-indigo-100 rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 group"
+            className="inline-flex items-center gap-2 text-sm font-bold text-slate-600 hover:text-primary transition-all duration-300 bg-white/60 backdrop-blur-md hover:bg-white px-5 py-2.5 border border-slate-200/80 hover:border-primary-light rounded-full shadow-sm hover:shadow-md hover:-translate-y-0.5 group"
           >
             <FiArrowLeft className="group-hover:-translate-x-0.5 transition-transform" />
             <span>Back to Home</span>
@@ -51,29 +51,29 @@ const Terms = () => {
         </div>
 
         {/* Premium Document Glass Panel */}
-        <article className="p-8 md:p-16 rounded-[2.5rem] bg-white/60 backdrop-blur-2xl border border-indigo-100 shadow-[0_8px_30px_rgba(99,102,241,0.06)] relative overflow-hidden">
+        <article className="p-8 md:p-16 rounded-[2.5rem] bg-white/60 backdrop-blur-2xl border border-slate-100 shadow-[0_8px_30px_rgba(15,23,42,0.03)] relative overflow-hidden">
           
           {/* Soft Ambient Inner Glows */}
-          <div className="absolute -top-32 -right-32 w-80 h-80 bg-indigo-500/10 rounded-full blur-[80px] pointer-events-none" />
-          <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-blue-500/5 rounded-full blur-[80px] pointer-events-none" />
+          <div className="absolute -top-32 -right-32 w-80 h-80 bg-primary/5 rounded-full blur-[80px] pointer-events-none" />
+          <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-secondary/5 rounded-full blur-[80px] pointer-events-none" />
 
           {/* Document Header */}
           <header className="relative z-10 mb-12 pb-10 border-b border-slate-200/80 text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-50 border border-indigo-100 text-xs font-bold uppercase tracking-wider text-indigo-600 mb-6 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary-light border border-primary/20 text-xs font-bold uppercase tracking-wider text-primary mb-6 shadow-sm">
               <FiFileText size={14} />
               <span>Usage Agreement</span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-950 mb-5">Terms of Service</h1>
-            <p className="text-slate-500 text-sm font-mono tracking-wide">LAST MODIFIED: MAY 23, 2026</p>
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-text-h mb-5 font-display">Terms of Service</h1>
+            <p className="text-text-muted text-sm font-mono tracking-wide">LAST MODIFIED: MAY 23, 2026</p>
           </header>
 
           {/* Document Content */}
-          <div className="relative z-10 space-y-12 text-left text-slate-600 text-base md:text-lg leading-relaxed font-medium">
+          <div className="relative z-10 space-y-12 text-left text-text text-base md:text-lg leading-relaxed font-medium">
             
             {/* Section 1 */}
             <section className="space-y-4">
-              <h2 className="text-2xl font-bold text-slate-950 flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-indigo-600 animate-pulse-dot shadow-[0_0_8px_rgba(99,102,241,0.6)]" />
+              <h2 className="text-2xl font-bold text-text-h flex items-center gap-3 font-display">
+                <span className="w-2 h-2 rounded-full bg-secondary animate-pulse-dot shadow-[0_0_8px_var(--color-secondary-glow)]" />
                 1. Acceptance of Terms
               </h2>
               <p className="text-pretty">
@@ -83,8 +83,8 @@ const Terms = () => {
 
             {/* Section 2 */}
             <section className="space-y-4">
-              <h2 className="text-2xl font-bold text-slate-950 flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-indigo-600 shadow-[0_0_8px_rgba(99,102,241,0.6)]" />
+              <h2 className="text-2xl font-bold text-text-h flex items-center gap-3 font-display">
+                <span className="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_var(--color-secondary-glow)]" />
                 2. User Representation & Verification
               </h2>
               <p className="text-pretty">
@@ -92,20 +92,20 @@ const Terms = () => {
               </p>
               <ul className="list-none space-y-4 mt-4">
                 <li className="flex gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-[0_2px_10px_rgba(15,23,42,0.02)]">
-                  <div className="w-1.5 h-1.5 rounded-full bg-indigo-400 mt-2.5 shrink-0" />
-                  <p className="text-pretty"><strong className="text-slate-900">Authenticity:</strong> Users must represent themselves with accurate professional credentials. Impersonation of other researchers, peer reviewers, or academic supervisors is strictly prohibited and subject to account termination.</p>
+                  <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2.5 shrink-0" />
+                  <p className="text-pretty"><strong className="text-text-h">Authenticity:</strong> Users must represent themselves with accurate professional credentials. Impersonation of other researchers, peer reviewers, or academic supervisors is strictly prohibited and subject to account termination.</p>
                 </li>
                 <li className="flex gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-[0_2px_10px_rgba(15,23,42,0.02)]">
-                  <div className="w-1.5 h-1.5 rounded-full bg-indigo-400 mt-2.5 shrink-0" />
-                  <p className="text-pretty"><strong className="text-slate-900">OAuth Requirements:</strong> Integrations such as ORCID OAuth authorization must reflect authentic and verified ownership.</p>
+                  <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2.5 shrink-0" />
+                  <p className="text-pretty"><strong className="text-text-h">OAuth Requirements:</strong> Integrations such as ORCID OAuth authorization must reflect authentic and verified ownership.</p>
                 </li>
               </ul>
             </section>
 
             {/* Section 3 */}
             <section className="space-y-4">
-              <h2 className="text-2xl font-bold text-slate-950 flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-indigo-600 shadow-[0_0_8px_rgba(99,102,241,0.6)]" />
+              <h2 className="text-2xl font-bold text-text-h flex items-center gap-3 font-display">
+                <span className="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_var(--color-secondary-glow)]" />
                 3. System Integrity & Grid Abuse
               </h2>
               <p className="text-pretty mb-4">
@@ -125,8 +125,8 @@ const Terms = () => {
 
             {/* Section 4 */}
             <section className="space-y-4">
-              <h2 className="text-2xl font-bold text-slate-950 flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-indigo-600 shadow-[0_0_8px_rgba(99,102,241,0.6)]" />
+              <h2 className="text-2xl font-bold text-text-h flex items-center gap-3 font-display">
+                <span className="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_var(--color-secondary-glow)]" />
                 4. Intellectual Property
               </h2>
               <p className="text-pretty">
@@ -136,8 +136,8 @@ const Terms = () => {
 
             {/* Section 5 */}
             <section className="space-y-4">
-              <h2 className="text-2xl font-bold text-slate-950 flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-indigo-600 shadow-[0_0_8px_rgba(99,102,241,0.6)]" />
+              <h2 className="text-2xl font-bold text-text-h flex items-center gap-3 font-display">
+                <span className="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_var(--color-secondary-glow)]" />
                 5. Disclaimer of Warranties
               </h2>
               <p className="text-pretty">
@@ -147,12 +147,12 @@ const Terms = () => {
 
             {/* Section 6 */}
             <section className="space-y-4 pb-4">
-              <h2 className="text-2xl font-bold text-slate-950 flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-indigo-600 shadow-[0_0_8px_rgba(99,102,241,0.6)]" />
+              <h2 className="text-2xl font-bold text-text-h flex items-center gap-3 font-display">
+                <span className="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_var(--color-secondary-glow)]" />
                 6. Contact Support
               </h2>
               <p className="text-pretty">
-                For legal inquiries regarding licensing, compute usage agreements, or general services, please contact our core engineering team via the <Link to="/contact" className="text-indigo-600 hover:text-indigo-800 underline underline-offset-4 decoration-indigo-200 hover:decoration-indigo-600 transition-colors font-bold">contact form</Link>.
+                For legal inquiries regarding licensing, compute usage agreements, or general services, please contact our core engineering team via the <Link to="/contact" className="text-primary hover:text-primary-hover underline underline-offset-4 decoration-primary/20 hover:decoration-primary transition-colors font-bold">contact form</Link>.
               </p>
             </section>
 

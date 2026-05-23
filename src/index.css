@@ -7,24 +7,32 @@
   --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  /* Custom Color Tokens */
-  --color-primary: #0f172a;            /* Slate-900 / Strong Dark CTA */
-  --color-primary-hover: #020617;      /* Slate-950 */
-  --color-accent: #e80014;             /* Crimson Red Accent */
-  --color-accent-hover: #c50010;       /* Darker Red */
-  --color-accent-glow: rgba(232, 0, 20, 0.15); /* Red Accent Glow */
+  /* Brand Color Tokens */
+  --color-primary: #CE0010;                      /* Brand Red */
+  --color-primary-hover: #A3000B;
+  --color-primary-light: #FFF1F2;
+  --color-primary-glow: rgba(206, 0, 16, 0.15);
+
+  --color-secondary: #1F8B51;                    /* Brand Green */
+  --color-secondary-hover: #17693C;
+  --color-secondary-light: #F0FDF4;
+  --color-secondary-glow: rgba(31, 139, 81, 0.15);
   
-  --color-text: #475569;               /* Slate-600 (High contrast body text) */
-  --color-text-muted: #64748b;         /* Slate-500 */
-  --color-text-h: #0f172a;             /* Slate-900 (High contrast headings) */
+  /* Neutral Color Tokens */
+  --color-text: #334155;                         /* Slate-700 for high-contrast body text */
+  --color-text-muted: #64748B;                   /* Slate-500 */
+  --color-text-h: #130A0A;                       /* Charcoal (from logo) for headings */
   
-  --color-bg: #f8fafc;                 /* Alabaster/Slate-50 */
-  --color-border: rgba(226, 232, 240, 0.5); /* Semi-translucent border */
-  --color-card-bg: rgba(255, 255, 255, 0.7); /* Translucent Card Background */
+  --color-bg: #F8FAFC;                           /* Slate-50 */
+  --color-border: rgba(226, 232, 240, 0.8);
+  --color-card-bg: rgba(255, 255, 255, 0.75);
   
-  /* Modern shadows - soft elevation */
+  --color-neutral-dark: #130A0A;
+  --color-neutral-darker: #0B0606;
+
+  /* Modern shadows - soft enterprise elevation */
   --shadow-premium: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
-  --shadow-premium-hover: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 8px -1px rgba(15, 23, 42, 0.03);
+  --shadow-premium-hover: 0 12px 30px -4px rgba(19, 10, 10, 0.08), 0 4px 12px -2px rgba(19, 10, 10, 0.03);
 }
 
 @layer base {
@@ -126,7 +134,7 @@
   .premium-card:hover {
     transform: translateY(-4px) scale(1.01);
     box-shadow: var(--shadow-premium-hover);
-    border-color: rgba(16, 185, 129, 0.25);
+    border-color: rgba(31, 139, 81, 0.25);
   }
 
   /* Elegant Glass Panel */
@@ -142,9 +150,9 @@
     display: inline-flex;
     align-items: center;
     padding: 6px 16px;
-    background: rgba(59, 130, 246, 0.08);
-    color: var(--color-accent);
-    border: 1px solid rgba(59, 130, 246, 0.15);
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+    border: 1px solid rgba(206, 0, 16, 0.15);
     border-radius: 9999px;
     font-size: 0.75rem;
     letter-spacing: 0.03em;
@@ -182,9 +190,9 @@
 
   .form-input:focus {
     outline: none;
-    border-color: var(--color-accent);
+    border-color: var(--color-primary);
     background: #ffffff;
-    box-shadow: 0 0 0 3px var(--color-accent-glow);
+    box-shadow: 0 0 0 3px var(--color-primary-glow);
   }
 
   /* Form Labels */
